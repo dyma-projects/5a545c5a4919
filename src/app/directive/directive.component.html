@@ -1,0 +1,23 @@
+<!-- sample 1 output -->
+<a  [href]='url'>{{ sample1 }}</a>
+
+<!-- sample 2 input -->
+<div style="background-color: red;width: 100px;height: 100px;" (click)='onClick($event)'></div>
+
+<!-- sample 3 output/input -->
+<!-- qst :
+   lors de l'utilisation de ngModel j'ai du importer FormsModule
+   pourquoi est-on obligé de réaliser cela dans app.component.ts avec le import explicit dans ngModule 
+   alors que par exemple l'import de OnInit dans directive.component.ts se suffit à lui même ? 
+-->
+
+<input [(ngModel)]='inputText'>
+<div>{{inputText}}</div>
+ 
+<p *ngIf=status>p1</p>
+<p *ngIf=!status>p2</p>
+<button (click)= 'status=!status;'>Click Me</button>
+
+<ul>
+  <li *ngFor='let text of texts'>{{text}}</li>
+</ul>

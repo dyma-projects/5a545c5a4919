@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  public clickOnLiaisons(): void {
+    console.log('clic !');
+  }
 }
